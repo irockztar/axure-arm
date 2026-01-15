@@ -1,0 +1,11 @@
+az account list - ver la sesion actual
+az account show - ver la suscripciones (id siempre sera suscription id tras la ejecucion de este comando)
+az role assignment list    #-s <id>//
+az group list - para ver cuantos recursos del grupo hay en la suscripción
+az resource list - para ver todos los recursos
+az role assignment list --all
+az role assignment list --asignee emp01@correo
+az role assignment list --asignee emp01@correo --all
+az role assignment list --asignee emp01@correo --all --debug mostrara todas las consultas backend llamadas a apis etc
+az role definition list --custom-role-only
+*Data accions es basicamente lo que tiene que estar definido*
